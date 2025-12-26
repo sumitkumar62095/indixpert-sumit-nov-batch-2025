@@ -1,34 +1,23 @@
 #include<stdio.h>
 
-int multiply()
+
+int sum(int number1, int number2)
 {
 
+    printf("%d",number1+number2);
 
-    int first_number;
-    int secoand_number;
-
-    printf("please enter a first number: ");
-    scanf("%d\n",&first_number);
-    printf("please enter secoand number: ");
-    scanf("%d\n",secoand_number);
-
-    printf("%d",first_number*secoand_number);
 
 }
-int division()
+int multiply(int number1, int number2)
 {
 
 
-    int first_number;
-    int secoand_number;
+    printf("%d",number1*number2);
+}
+int subtract(int number1, int number2)
+{
 
-
-
-    printf("please enter first number: ");
-    scanf("%d\n",&first_number);
-    printf("please enter secoand number: ");
-    scanf("%d",&secoand_number);
-    printf("%d\n",first_number/secoand_number);
+    printf("%d",number1-number2);
 }
 
 
@@ -36,20 +25,31 @@ int division()
 int main()
 {
 
-int number;
-printf("\n1.devision");
-printf("\n2.multiply");
-printf("please enter any option number: ");
-scanf("%d",&number);
-if(number==1)
-{
+    int number;
+    printf("\n1.addition");
+    printf("\n2.multiply");
+    printf("\n3.subtract");
 
-    multiply();
-}
-else if(number==2)
-{
-    division();
-}
+    printf("please enter any options: ");
+    scanf("%d",&number);
 
+    int first_number=20;
+    int secoand_number=30;
+    if(number==1)
+    {
+
+        sum(20,30);
+    }
+    else if(number==2)
+    {
+
+        multiply(20,30);
+    }
+    else if(number==3)
+    {
+
+
+        subtract(20,30);
+    }
     return 0;
 }
